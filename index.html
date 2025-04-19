@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>Select language | Nikita Borozdov</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,14 +47,16 @@
   </div>
 
   <script>
-    const lang = localStorage.getItem('lang');
-    if (lang) {
-      window.location.replace(`/${lang}/`);
+    const base = "https://rymtnrwtq.github.io/test_site";
+
+    const saved = localStorage.getItem("lang");
+    if (saved) {
+      window.location.replace(`${base}/${saved}/`);
     }
 
     function selectLang(code) {
-      localStorage.setItem('lang', code);
-      window.location.replace(`/${code}/`);
+      localStorage.setItem("lang", code);
+      window.location.replace(`${base}/${code}/`);
     }
   </script>
 </body>
